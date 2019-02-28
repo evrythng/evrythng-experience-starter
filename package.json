@@ -5,7 +5,9 @@
   "main": " ",
   "scripts": {
     "start": "parcel ./index.html",
-    "build": "parcel build ./index.html --public-url .",
+    "build": "parcel build --public-url .",
+    "build:basic": "npm run build -- ./experiences/basic/index.html",
+    "build:voxel-builder": "npm run build -- ./experiences/voxel-builder/index.html",
     "update": "node ./scripts/update"
   },
   "author": "",
@@ -15,6 +17,7 @@
     "evrythng-extended": "^4.7.2",
     "parcel": "^1.11.0",
     "parcel-plugin-clean-dist": "0.0.6",
-    "parcel-plugin-inliner": "^1.0.4"
+    "parcel-plugin-inliner": "^1.0.4",
+    "sass": "^1.17.2"
   }
 }

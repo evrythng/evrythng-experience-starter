@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 if (require.main === module) {
-  const experience = readExperience(getArg('--experience'));
+  const experience = readExperience(getArg('--experience') || 'index');
   const productId = getArg('--productId');
   const apiKey = getArg('--apiKey');
   
@@ -25,7 +25,7 @@ function getArg(name) {
 }
 
 function readExperience(name) {
-  const availableExperiences = fs.readdirSync(path.resolve(__dirname, '../experiences'));
+  const availableExperiences = fs.readdirSync(path.resolve(__dirname, '../dist'));
   const targetExperience = availableExperiences.find(experience => experience.startsWith(name));
 
   if (!targetExperience) {
@@ -34,7 +34,7 @@ function readExperience(name) {
   
   return String(
     fs.readFileSync(
-      path.resolve(__dirname, '../experiences', targetExperience)
+      path.resolve(__dirname, '../dist', targetExperience)
     )
   );
 }

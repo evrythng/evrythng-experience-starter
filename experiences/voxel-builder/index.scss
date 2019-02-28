@@ -1,0 +1,42 @@
+body {
+  overflow: hidden;
+}
+
+scene-pointer {
+  display: block;
+  position: absolute;
+
+  top: calc(50% - .5vmax);
+  left: calc(50% - .5vmax);
+
+  width: 1vmax;
+  height: 1vmax;
+
+  background-color: violet;
+  border-radius: 100vw;
+  z-index: 20;
+  mix-blend-mode: difference;
+}
+
+scene-action {
+  display: block;
+  position: absolute;
+
+  left: calc(50% - 2.5vmax);
+  bottom: calc(10% - 2.5vmax);
+
+  width: 10vmax;
+  height: 10vmax;
+  max-width: 100px;
+  max-height: 100px;
+
+  background-color: white;
+  border-radius: 100vw;
+  z-index: 20;
+  mix-blend-mode: difference;
+  cursor: pointer;
+}
+
+scene-action:active {
+  opacity: .5;
+}
