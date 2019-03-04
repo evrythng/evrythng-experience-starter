@@ -4,7 +4,8 @@
   "description": "",
   "main": " ",
   "scripts": {
-    "start": "parcel ./index.html",
+    "start": "parcel ./experiences/basic/index.html",
+    "start:voxel-builder": "parcel ./experiences/voxel-builder/index.html",
     "build": "parcel build --public-url .",
     "build:basic": "npm run build -- ./experiences/basic/index.html",
     "build:voxel-builder": "npm run build -- ./experiences/voxel-builder/index.html",
