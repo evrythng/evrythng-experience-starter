@@ -63,7 +63,7 @@ function uploadExperience(apiKey, productId, experience) {
     });
 
   experience = $.html();
-
+  
   return operator
     .product(productId)
     .update({
@@ -71,6 +71,9 @@ function uploadExperience(apiKey, productId, experience) {
         'product_experience_type': 'custom',
         'custom_experience_scripts': dependencies,
         'custom_experience': experience
+      },
+      scopes: {
+        users: ['+all']
       }
     });
 }
